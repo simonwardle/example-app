@@ -5,7 +5,11 @@ use Illuminate\Support\Arr;
 use App\Models\Job;
 
 
+// Route::get('/', function () {
+//     $jobs = Job::all();
 
+//     dd($jobs[1]->title);
+// });
 
 Route::get('/', function () {
     return view('home');
