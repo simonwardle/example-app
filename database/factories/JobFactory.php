@@ -19,7 +19,8 @@ class JobFactory extends Factory
     {
         return [
             'title' => fake()->jobTitle(),
-            'salary' => fake()->numerify('######'),
+            'employer_id' => Employer::factory(),
+            'salary' => fake()->numerify('£##,###'),
         ];
     }
 }
