@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\PostController;
+
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Arr;
 use App\Models\Job;
 
 
