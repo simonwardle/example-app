@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/jobs', function () {
-    $jobs = Job::with('employer')->latest()->paginate(5);
+    $jobs = Job::with('employer')->latest()->simplePaginate(5);
 
     return view('jobs.index', [
         'jobs' => $jobs
