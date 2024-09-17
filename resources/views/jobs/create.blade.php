@@ -19,8 +19,11 @@
                 focus-within:ring-indigo-600 sm:max-w-md">
                 <input type="text" name="title" id="title" class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 
                   shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset 
-                  focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Shift Leader">
+                  focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="Shift Leader" required>
               </div>
+              @error('title')
+                <p class="text-red-500 text-sm font-semibold mt-1">{{ $message }}</p> 
+              @enderror
             </div>
           </div>
           <div class="sm:col-span-4">
@@ -30,11 +33,23 @@
                 focus-within:ring-indigo-600 sm:max-w-md">
                 <input type="text" name="salary" id="salary" class="block w-full rounded-md border-0 py-1.5 px-3 text-gray-900 
                   shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset 
-                  focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="£50,000 Per year.">
+                  focus:ring-indigo-600 sm:text-sm sm:leading-6" placeholder="£50,000 Per year." required>
               </div>
+              @error('salary')
+                <p class="text-red-500 text-sm font-semibold mt-1">{{ $message }}</p> 
+              @enderror
             </div>
           </div>
         </div>
+        <!-- <div class="mt-10">
+          @if($errors->any())
+          <ul>
+            @foreach($errors->all() as $error)
+            <li class="text-red-500 italic">{{$error}}</li>
+            @endforeach
+          </ul>
+          @endif
+        </div> -->
       </div>
     </div>
 
