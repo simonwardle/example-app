@@ -21,7 +21,6 @@
             </div>
           </x-form-field>
 
-
           <!-- Salary -->
           <x-form-field>
             <x-form-label for="salary">Salary</x-form-label>
@@ -34,7 +33,6 @@
         </div>
       </div>
     </div>
-
 
     <!-- Buttons -->
     <div class="mt-6 flex items-center justify-end gap-x-6">
